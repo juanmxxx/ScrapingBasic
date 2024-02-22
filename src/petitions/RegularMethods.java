@@ -1,10 +1,7 @@
 package petitions;
 
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.Reader;
+import java.io.*;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -24,7 +21,7 @@ public class RegularMethods {
      * @param info
      * @return
      */
-    public static String encryptInfo(String info) {
+    public static String encrypt(String info) {
         String encryptText = null;
 
         try{
@@ -42,7 +39,7 @@ public class RegularMethods {
      * @param encryptText
      * @return
      */
-    public static String desencryptInfo(String encryptText) {
+    public static String desencrypt(String encryptText) {
         String info = null;
 
         try {
@@ -97,7 +94,7 @@ public class RegularMethods {
             e.printStackTrace();
         }
 
-        createDirectory();
+        createDirectory(SaveVariables.HTMLDIRECTORY);
 
         try {
             Path path = Paths.get(SaveVariables.HTMLFILENAME);
@@ -109,12 +106,56 @@ public class RegularMethods {
         }
     }
 
-    public static void createDirectory(){
-        Path path = Paths.get(SaveVariables.HTMLDIRECTORY);
+    public static void createDirectory(String filePath){
+        Path path = Paths.get(filePath);
         try{
-            Files.createDirectory(path);
+            //Poner createDirectories para que cree el directorio y si ya existe no de error
+            //Si no existe el directorio lo crea y si ya existe no hace nada
+            Files.createDirectories(path);
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
+        }
+    }
+
+    public static void encryptAndWrite(List<String> info) throws IOException {
+        createDirectory(SaveVariables.ENCRYPTDIRECTORY);
+        FileWriter fileWriter = new FileWriter(SaveVariables.ENCRYPTFILENAME);
+        BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+
+        for(String line : info) {
+            String encryptLine = encrypt(line);
+            bufferedWriter.write(encryptLine);
+            bufferedWriter.newLine();
+        }
+        bufferedWriter.close();
+    }
+
+    public static List<String> desencryptAndRead() throws IOException {
+        List<String> info = null;
+        try {
+            info = Files.readAllLines(Paths.get(SaveVariables.ENCRYPTFILENAME));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        for(String line : info) {
+            String desencryptLine = desencrypt(line);
+            System.out.println(desencryptLine);
+        }
+        return info;
+    }
+
+    public static void desencryptAndPrint() throws IOException {
+        List<String> info = desencryptAndRead();
+
+        for (String line : info)
+            System.out.println(line);
+
+    }
+
+    public static void encryptAndPrint(List<String> info) {
+        for(String line : info) {
+            String encryptLine = encrypt(line);
+            System.out.println(encryptLine);
         }
     }
 

@@ -4,20 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5ecf9263-b539-4e1c-a6bd-4a501a082609" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ScrapingBasic.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/encryption/AESSimpleManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/petitions/RegularMethods.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/variables/EncryptVariables.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/variables/GeneralVariables.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/variables/GettingVariables.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/variables/SaveVariables.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/variables/Variables.java" afterDir="false" />
+    <list default="true" id="5ecf9263-b539-4e1c-a6bd-4a501a082609" name="Changes" comment="Primer commit: bases ya creadas, variables asignadas cada una en su clase">
+      <change afterPath="$PROJECT_DIR$/src/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/petitions/ConsultingMethods.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/petitions/ey.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pojo/Film.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pojo/InfoFilm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/petitions/RegularMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/petitions/RegularMethods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/variables/GeneralVariables.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/variables/GeneralVariables.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/variables/GettingVariables.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/variables/GettingVariables.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/variables/SaveVariables.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/variables/SaveVariables.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,48 +24,63 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2chFxq9N8TRAffvCYS2g22s2Ot1" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Test.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="encryption" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Test" />
+      <module name="ScrapingBasic" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Test" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -85,8 +97,26 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1708556155282</updated>
-      <workItem from="1708556156309" duration="3379000" />
+      <workItem from="1708556156309" duration="6197000" />
+      <workItem from="1708629262184" duration="2406000" />
     </task>
+    <task id="LOCAL-00001" summary="Primer commit: bases ya creadas, variables asignadas cada una en su clase">
+      <option name="closed" value="true" />
+      <created>1708559573989</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1708559573989</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Primer commit: bases ya creadas, variables asignadas cada una en su clase">
+      <option name="closed" value="true" />
+      <created>1708559617101</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1708559617101</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -102,5 +132,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Primer commit: bases ya creadas, variables asignadas cada una en su clase" />
+    <option name="LAST_COMMIT_MESSAGE" value="Primer commit: bases ya creadas, variables asignadas cada una en su clase" />
   </component>
 </project>

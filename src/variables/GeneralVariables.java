@@ -5,6 +5,6 @@ public interface GeneralVariables {
     public static final String PART = "/find/";
     public static final String SCHEMA = "https://";
     public static final String DIRECTORY = "ficheros/directores";
-    public static final String ACTOR = "Will Smith";
+    public static final String ACTOR = "Silvester Stallone";
 
 }
